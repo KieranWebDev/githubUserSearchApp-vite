@@ -47,7 +47,7 @@ function App() {
       <NavBar />
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       {loading && <h1>Loading...</h1>}
-      {validUsername && <SearchResults userData={userData} />}
+      {validUsername && !loading && <SearchResults userData={userData} />}
       {!validUsername && <h1>No Results braaaa</h1>}
     </div>
   );
