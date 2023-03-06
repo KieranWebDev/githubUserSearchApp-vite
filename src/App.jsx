@@ -1,5 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import useLocalStorage from 'use-local-storage';
+
 // styles
 import './App.css';
 // components
@@ -13,6 +15,16 @@ function App() {
   const [validUsername, setValidUsername] = useState(true);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  // dark mode
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage(
+    'theme',
+    defaultDark ? 'dark' : 'light'
+  );
+
+  function switchTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -43,12 +55,15 @@ function App() {
   }, [searchQuery, error]);
 
   return (
-    <div className="app-container">
-      <NavBar />
-      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      {loading && <h1>Loading...</h1>}
-      {validUsername && !loading && <SearchResults userData={userData} />}
-      {!validUsername && <h1>No Results braaaa</h1>}
+    <div className="body" data-theme={theme}>
+      <div className="app-container" data-theme={theme}>
+        <button onClick={switchTheme}>change theme</button>
+        <NavBar />
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        {loading && <h1>Loading...</h1>}
+        {validUsername && !loading && <SearchResults userData={userData} />}
+        {!validUsername && <h1>No Results braaaa</h1>}
+      </div>
     </div>
   );
 }

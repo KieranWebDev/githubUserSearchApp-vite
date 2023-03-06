@@ -18,7 +18,7 @@ export default function SearchResults({ userData }) {
     company,
   } = userData;
   return (
-    <div>
+    <div className="search-results">
       <img src={avatar_url} alt="avator pic" />
       <h1>{name}</h1>
       <h3>
