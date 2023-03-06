@@ -1,5 +1,6 @@
 .search-bar-container {
   margin-bottom: 1rem;
+  background: var(--component-background);
 }
 
 .form-container {
@@ -35,7 +36,7 @@ input[type='text'] {
   font-weight: 700;
   font-size: 14px;
   color: white;
-  background-color: var(--dm-lightblue);
+  background-color: var(--button);
   border-radius: 10px;
   flex-grow: 1;
   border: none;
