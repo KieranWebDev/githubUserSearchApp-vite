@@ -22,7 +22,7 @@
 input[type='text'] {
   font-family: 'Space Mono', monospace;
   background-color: inherit;
-  color: white;
+  color: var(--text-primary);
   border: none;
   outline: none;
   flex-grow: 2;
