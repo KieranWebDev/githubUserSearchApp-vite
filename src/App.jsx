@@ -22,14 +22,11 @@ function App() {
     defaultDark ? 'dark' : 'light'
   );
 
-  function switchTheme() {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  }
-
   useEffect(() => {
     async function fetchData() {
       try {
         setLoading(true);
+        setValidUsername(true);
         const response = await fetch(
           `https://api.github.com/users/${searchQuery}`
         );
@@ -57,8 +54,7 @@ function App() {
   return (
     <div className="body" data-theme={theme}>
       <div className="app-container" data-theme={theme}>
-        <button onClick={switchTheme}>change theme</button>
-        <NavBar />
+        <NavBar theme={theme} setTheme={setTheme} />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         {loading && <h1>Loading...</h1>}
         {validUsername && !loading && <SearchResults userData={userData} />}
