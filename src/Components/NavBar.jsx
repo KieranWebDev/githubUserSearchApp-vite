@@ -6,22 +6,30 @@ import darkmode from '../images/icon-moon.svg';
 
 import './NavBar.css';
 
-export default function NavBar() {
-  const [darkMode, setDarkMode] = useState(true);
+export default function NavBar({ theme, setTheme }) {
+  // const [darkMode, setDarkMode] = useState(true);
+
+  function switchTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  }
+
+  const themeToggleButton =
+    theme === 'light' ? (
+      <button onClick={switchTheme}>
+        <span>DARK</span>
+        <img src={darkmode} alt="darkmode" />
+      </button>
+    ) : (
+      <button onClick={switchTheme}>
+        <span>LIGHT</span>
+        <img src={lightmode} alt="lightmode" />
+      </button>
+    );
+
   return (
     <header>
       <h1>devfinder</h1>
-      {darkMode ? (
-        <button onClick={() => setDarkMode(!darkMode)}>
-          <span>LIGHT</span>
-          <img src={lightmode} alt="lightmode" />
-        </button>
-      ) : (
-        <button onClick={() => setDarkMode(!darkMode)}>
-          <span>DARK</span>
-          <img src={darkmode} alt="darkmode" />
-        </button>
-      )}
+      {themeToggleButton}
     </header>
   );
 }

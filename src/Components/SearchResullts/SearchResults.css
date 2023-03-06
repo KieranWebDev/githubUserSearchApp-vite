@@ -1,3 +1,7 @@
+.search-results {
+  background-color: var(--component-background);
+}
+
 img {
   display: block;
   width: 100px;

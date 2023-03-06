@@ -11,29 +11,38 @@ html {
 }
 /* variables */
 :root {
-  /* lightmode */
-  --lm-lghtblue: #0079ff;
-  --lm-lghtgray: #697c9a;
-  --lm-lghtgrayishblue: #4b6a9b;
-  --lm-lghtgrayishblue2: #2b3442;
-  --lm-creamishwhite: #f6f8ff;
-  --lm-white: #ffffff;
+  --button: #0079ff;
+  --lm-lightgray: #697c9a;
+  /* --lm-lightgrayishblue: #4b6a9b; */
+  /* --lm-lightgrayishblue2: #2b3442; */
+  /* lightMode */
+  --body-background: #f6f8ff;
+  --component-background: #fefefe;
+  --text-primary: #2b3442;
+  --text-secondary: #4b6a9b;
+  -text-not-available: #4b6a9b;
+  /* --lm-white: #ffffff; */
 
   /* darkmode */
-  --dm-lightblue: #0079ff;
-  --dm-white: #ffffff;
-  --dm-darkblue: #141d2f;
-  --dm-grayishblue: #1e2a47;
+  /* --dm-lightblue: #0079ff; */
+  /* --dm-white: #ffffff; */
+  /* --dm-body-background: #141d2f;
+  --dm-component-background: #1e2a47; */
 }
-
+[data-theme='dark'] {
+  --body-background: #141d2f;
+  --component-background: #1e2a47;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+}
 /* global styles */
 img {
   display: block;
 }
 
-body {
-  background: #141d2f;
-  color: white;
+.body {
+  background: var(--body-background);
+  color: var(--text-primary);
   font-family: 'Space Mono', monospace;
   display: flex;
   flex-direction: column;
@@ -41,11 +50,13 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0 auto;
+  transition: all 0.5s;
 }
 .app-container {
   /* border: 1px solid white; */
+  color: var(--text-primary);
   min-width: 250px;
   max-width: 730px;
   margin: 1.5rem;
+  transition: all 0.5s;
 }
-
