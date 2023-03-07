@@ -15,12 +15,12 @@ export default function NavBar({ theme, setTheme }) {
 
   const themeToggleButton =
     theme === 'light' ? (
-      <button onClick={switchTheme}>
+      <button className="dark" onClick={switchTheme}>
         <span>DARK</span>
         <img src={darkmode} alt="darkmode" />
       </button>
     ) : (
-      <button onClick={switchTheme}>
+      <button className="light" onClick={switchTheme}>
         <span>LIGHT</span>
         <img src={lightmode} alt="lightmode" />
       </button>

@@ -7,7 +7,7 @@ header {
   /* background: var(--component-background); */
 }
 header h1 {
-  font-size: 1.625rem;
+  font-size: 26px;
   font-weight: 800;
 }
 
@@ -36,10 +36,13 @@ header button span {
 header button img {
   height: 20px;
   width: 20px;
-  color: #ff0000;
 }
-/* .moon {
-  height: 20px;
-  width: 20px;
-  fill: red;
-} */
+.light:hover {
+  color: #90a4d4;
+}
+.dark:hover {
+  color: #222731;
+}
+.dark {
+  color: #4b6a9b;
+}
