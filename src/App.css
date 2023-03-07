@@ -51,6 +51,7 @@ img {
   height: 100vh;
   margin: 0 auto;
   transition: all 0.5s;
+  font-size: 13px;
 }
 .app-container {
   /* border: 1px solid white; */
