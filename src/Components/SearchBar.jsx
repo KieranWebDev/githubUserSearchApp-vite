@@ -9,10 +9,12 @@ import { useState } from 'react';
 export default function SearchBar(props) {
   const [tempVal, setTempVal] = useState('');
 
+  // console.log(props);
+
   function handleSubmit(e) {
     e.preventDefault();
     props.setSearchQuery(tempVal);
-    console.log(props.searchQuery);
+    // console.log(props.searchQuery);
   }
 
   return (
@@ -21,9 +23,11 @@ export default function SearchBar(props) {
         <img src={searchicon} alt="searchicon" />
         <input
           type="text"
-          placeholder="Search Githib username..."
+          placeholder="Search GitHub username..."
           onChange={(e) => setTempVal(e.target.value)}
         />
+
+        {!props.validUsername && <span className="no-results">No Results</span>}
         <button onClick={handleSubmit}>Search</button>
       </form>
     </div>

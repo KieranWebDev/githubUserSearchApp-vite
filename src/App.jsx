@@ -38,8 +38,8 @@ function App() {
           setLoading(false);
         } else if (data.message) {
           setValidUsername(false);
-          setError(data.message);
           setLoading(false);
+          setError(data.message);
           console.log(error);
         }
       } catch (error) {
@@ -54,7 +54,11 @@ function App() {
     <div className="body" data-theme={theme}>
       <div className="app-container">
         <NavBar theme={theme} setTheme={setTheme} />
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        <SearchBar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          validUsername={validUsername}
+        />
         {loading && <h1>Loading...</h1>}
         {validUsername && !loading && <SearchResults userData={userData} />}
         {!validUsername && <h1>No Results braaaa</h1>}
