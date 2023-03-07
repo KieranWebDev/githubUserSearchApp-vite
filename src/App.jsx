@@ -32,15 +32,14 @@ function App() {
         );
         const data = await response.json();
         console.log(data);
-        setUserData(data);
-        setLoading(false);
 
         if (response.ok) {
           setUserData(data);
+          setLoading(false);
         } else if (data.message) {
           setValidUsername(false);
-        } else {
           setError(data.message);
+          setLoading(false);
           console.log(error);
         }
       } catch (error) {
@@ -53,7 +52,7 @@ function App() {
 
   return (
     <div className="body" data-theme={theme}>
-      <div className="app-container" data-theme={theme}>
+      <div className="app-container">
         <NavBar theme={theme} setTheme={setTheme} />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         {loading && <h1>Loading...</h1>}
