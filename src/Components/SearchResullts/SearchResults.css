@@ -106,7 +106,13 @@
     height: 117px;
     width: 117px;
   }
-
+  /* repo info */
+  .repo-info {
+    text-align: left;
+  }
+  .repo-info td {
+    width: 100px;
+  }
   .contact-info {
     flex-direction: row;
     flex-wrap: wrap;
