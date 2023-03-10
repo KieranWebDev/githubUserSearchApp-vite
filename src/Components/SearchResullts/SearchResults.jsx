@@ -24,7 +24,9 @@ export default function SearchResults({ userData }) {
   } = userData;
   return (
     <div className="search-results">
-      <img className="profile-img" src={avatar_url} alt="avator pic" />
+      <div className="profile-img-container">
+        <img className="profile-img" src={avatar_url} alt="avator pic" />
+      </div>
       <div className="title-info">
         <h1>{name}</h1>
         <h3>
@@ -32,11 +34,13 @@ export default function SearchResults({ userData }) {
             @{login}
           </a>
         </h3>
-        <p>{created_at}</p>
+        <p className="created-at-date">{created_at}</p>
+        {bio && <p className="bio">{bio}</p>}
       </div>
-      {bio && <p className="bio">{bio}</p>}
       {!bio && (
-        <p className="bio">This user has not completed their bio section</p>
+        <p className="bio">
+          This user has not completed their bio section yet. Check back later!
+        </p>
       )}
 
       <table className="repo-info">
