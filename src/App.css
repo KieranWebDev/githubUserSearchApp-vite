@@ -50,7 +50,7 @@ img {
   justify-content: flex-start;
   height: 100vh;
   margin: 0 auto;
-  /* padding: 2rem 0; */
+  padding: 2rem 0;
   transition: all 0.5s;
   font-size: 13px;
 }
@@ -71,5 +71,6 @@ img {
 @media (min-width: 500px) {
   .body {
     justify-content: center;
+    padding-top: 0;
   }
 }
