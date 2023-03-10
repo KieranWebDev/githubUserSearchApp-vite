@@ -61,7 +61,12 @@ function App() {
         />
         {loading && <h1>Loading...</h1>}
         {validUsername && !loading && <SearchResults userData={userData} />}
-        {!validUsername && <h1>No Results braaaa</h1>}
+        {!validUsername && (
+          <h1 className="invalid-user-message">
+            Sorry, we can't find any results for this username. Please check the
+            spelling and try again.
+          </h1>
+        )}
       </div>
     </div>
   );

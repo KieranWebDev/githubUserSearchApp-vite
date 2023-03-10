@@ -63,6 +63,10 @@ img {
 
   transition: all 0.5s;
 }
+.invalid-user-message {
+  padding: 2rem 0;
+  text-align: center;
+}
 
 @media (min-width: 500px) {
   .body {

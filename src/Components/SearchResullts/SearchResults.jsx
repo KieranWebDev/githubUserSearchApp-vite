@@ -35,8 +35,8 @@ export default function SearchResults({ userData }) {
           </a>
         </h3>
         <p className="created-at-date">{created_at}</p>
-        {bio && <p className="bio">{bio}</p>}
       </div>
+      {bio && <p className="bio">{bio}</p>}
       {!bio && (
         <p className="bio">
           This user has not completed their bio section yet. Check back later!
