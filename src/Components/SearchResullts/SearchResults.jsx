@@ -22,6 +22,19 @@ export default function SearchResults({ userData }) {
     twitter_username,
     company,
   } = userData;
+
+  const date = new Date(created_at);
+  const formattedDate =
+    'Joined ' +
+    date
+      .toLocaleDateString('en-US', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+      })
+      .split(',')
+      .join(' ');
+
   return (
     <div className="search-results">
       <div className="profile-img-container">
@@ -34,7 +47,7 @@ export default function SearchResults({ userData }) {
             @{login}
           </a>
         </h3>
-        <p className="created-at-date">{created_at}</p>
+        <p className="created-at-date">{formattedDate}</p>
       </div>
       {bio && <p className="bio">{bio}</p>}
       {!bio && (
