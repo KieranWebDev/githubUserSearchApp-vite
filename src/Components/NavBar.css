@@ -22,9 +22,9 @@ header button {
   gap: 6px;
   padding-right: 3px;
 }
-header button:focus {
+/* header button:focus {
   outline: none;
-}
+} */
 
 header button span {
   font-size: 13px;

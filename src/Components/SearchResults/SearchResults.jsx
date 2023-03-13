@@ -1,11 +1,12 @@
 import React from 'react';
-
+// images
 import locationImg from '../../images/icon-location.svg';
 import companyImg from '../../images/icon-company.svg';
 import blogImg from '../../images/icon-website.svg';
 import twitterImg from '../../images/icon-twitter.svg';
-
+// styles
 import './SearchResults.css';
+
 export default function SearchResults({ userData }) {
   const {
     name,
@@ -36,10 +37,11 @@ export default function SearchResults({ userData }) {
       .join(' ');
 
   return (
-    <div className="search-results">
+    <section className="search-results">
       <div className="profile-img-container">
         <img className="profile-img" src={avatar_url} alt="avator pic" />
       </div>
+
       <div className="title-info">
         <h1>{name}</h1>
         <h3>
@@ -82,6 +84,7 @@ export default function SearchResults({ userData }) {
             <span className="not-avail">Not Available</span>
           )}
         </li>
+
         <li>
           <img src={blogImg} alt="blogImg" />
           {blog ? (
@@ -92,6 +95,7 @@ export default function SearchResults({ userData }) {
             <span className="not-avail">Not Available</span>
           )}
         </li>
+
         <li>
           <img src={twitterImg} alt="twitterImg" />
           {twitter_username ? (
@@ -102,6 +106,7 @@ export default function SearchResults({ userData }) {
             <span className="not-avail">Not Available</span>
           )}
         </li>
+
         <li>
           <img src={companyImg} alt="companyImg" />
           {company ? (
@@ -111,18 +116,6 @@ export default function SearchResults({ userData }) {
           )}
         </li>
       </ul>
-      {/* <p>{location}</p>
-        {!userData.location && <p>Not available</p>}
-
-      </ul>
-        <p>{location}</p>
-        {!userData.location && <p>Not available</p>}
-        <p>{blog}</p>
-        {!blog && <p>Not available</p>}
-        <p>{twitter_username}</p>
-        {!twitter_username && <p>Not available</p>}
-        <p>{company}</p>
-        {!company && <p>Not available</p>} */}
-    </div>
+    </section>
   );
 }

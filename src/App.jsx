@@ -7,7 +7,7 @@ import './App.css';
 // components
 import NavBar from './Components/NavBar';
 import SearchBar from './Components/SearchBar';
-import SearchResults from './Components/SearchResullts/SearchResults';
+import SearchResults from './Components/SearchResults/SearchResults';
 
 function App() {
   const [userData, setUserData] = useState({});
@@ -55,11 +55,11 @@ function App() {
       <div className="app-container">
         <NavBar theme={theme} setTheme={setTheme} />
         <SearchBar
-          searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           validUsername={validUsername}
         />
         {loading && <h1>Loading...</h1>}
+
         {validUsername && !loading && <SearchResults userData={userData} />}
         {!validUsername && (
           <h1 className="invalid-user-message">

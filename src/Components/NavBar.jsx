@@ -1,28 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
 
-import lightmode from '../images/icon-sun.svg';
-import darkmode from '../images/icon-moon.svg';
-
+// styles
 import './NavBar.css';
+// components
+import sunIcon from '../images/icon-sun.svg';
+import moonIcon from '../images/icon-moon.svg';
 
 export default function NavBar({ theme, setTheme }) {
-  // const [darkMode, setDarkMode] = useState(true);
-
   function switchTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light');
   }
 
   const themeToggleButton =
     theme === 'light' ? (
-      <button className="dark" onClick={switchTheme}>
+      <button
+        className="dark"
+        onClick={switchTheme}
+        aria-label="Switch to dark mode"
+      >
         <span>DARK</span>
-        <img src={darkmode} alt="darkmode" />
+        <img src={moonIcon} alt="darkmode" />
       </button>
     ) : (
-      <button className="light" onClick={switchTheme}>
+      <button
+        className="light"
+        onClick={switchTheme}
+        aria-label="Switch to light mode"
+      >
         <span>LIGHT</span>
-        <img src={lightmode} alt="lightmode" />
+        <img src={sunIcon} alt="lightmode" />
       </button>
     );
 
