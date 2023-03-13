@@ -139,6 +139,11 @@
     grid-template-rows: 120px, 1fr;
     gap: 0;
   }
+
+  .profile-img-container {
+    grid-row: 1/3;
+  }
+
   .repo-info,
   .bio,
   .contact-info {
@@ -148,9 +153,6 @@
   .repo-info,
   .bio {
     margin-bottom: 2rem;
-  }
-  .profile-img-container {
-    grid-row: 1/3;
   }
   .title-info {
     padding-left: 0;
