@@ -5,9 +5,7 @@
   padding: 2rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   gap: 1.5rem 0;
-  /* min-height: 50vh; */
 }
 .profile-img-container {
   grid-column: 1 / 2;
@@ -78,8 +76,6 @@
 .contact-info li {
   display: flex;
   align-items: center;
-  /* gap: 0 1rem; */
-  /* margin-bottom: 0.5rem; */
 }
 .contact-info img {
   display: inline;
@@ -117,9 +113,9 @@
 
   .title-info h1 {
     font-size: 1.625rem;
-    /* margin-bottom: 0.7rem; */
     line-height: 39px;
   }
+
   /* repo info */
   .repo-info {
     text-align: left;
@@ -138,8 +134,6 @@
 
 @media (min-width: 768px) {
   .search-results {
-    /* padding: 3.25rem, 3rem; */
-    /* grid-template-rows: 120px, 1fr; */
     gap: 0;
   }
 
@@ -157,6 +151,7 @@
   .bio {
     margin-bottom: 2rem;
   }
+
   .title-info {
     padding-left: 0;
     display: grid;

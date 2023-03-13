@@ -12,22 +12,12 @@ html {
 /* variables */
 :root {
   --button: #0079ff;
-  --lm-lightgray: #697c9a;
-  /* --lm-lightgrayishblue: #4b6a9b; */
-  /* --lm-lightgrayishblue2: #2b3442; */
   /* lightMode */
   --body-background: #f6f8ff;
   --component-background: #fefefe;
   --text-primary: #2b3442;
   --text-secondary: #4b6a9b;
   -text-not-available: #4b6a9b;
-  /* --lm-white: #ffffff; */
-
-  /* darkmode */
-  /* --dm-lightblue: #0079ff; */
-  /* --dm-white: #ffffff; */
-  /* --dm-body-background: #141d2f;
-  --dm-component-background: #1e2a47; */
 }
 [data-theme='dark'] {
   --body-background: #141d2f;
@@ -50,21 +40,20 @@ img {
   justify-content: flex-start;
   height: 100vh;
   margin: 0 auto;
-  padding: 2rem 0;
   transition: all 0.5s;
   font-size: 13px;
+  padding: 2rem 0;
 }
 .app-container {
-  /* border: 1px solid white; */
   color: var(--text-primary);
   min-width: 250px;
   max-width: 730px;
   margin: 0 1.5rem;
-
   transition: all 0.5s;
 }
 .invalid-user-message {
   padding: 2rem 0;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -72,5 +61,15 @@ img {
   .body {
     justify-content: center;
     padding-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .app-container {
+    margin: 0;
+  }
+  .invalid-user-message {
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    text-align: center;
   }
 }
