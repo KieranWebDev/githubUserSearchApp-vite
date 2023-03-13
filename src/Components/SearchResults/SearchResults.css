@@ -29,6 +29,7 @@
 }
 .title-info h1 {
   font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 .title-info a {
   text-decoration: none;
@@ -72,7 +73,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 .contact-info li {
   display: flex;
