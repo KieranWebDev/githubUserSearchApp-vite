@@ -103,10 +103,11 @@
 
 @media (min-width: 500px) {
   .search-results {
+    padding: 52px 3rem;
     gap: 2rem;
   }
   .profile-img-container {
-    justify-self: center;
+    justify-self: left;
     align-self: start;
   }
   .profile-img {
@@ -137,7 +138,8 @@
 
 @media (min-width: 768px) {
   .search-results {
-    grid-template-rows: 120px, 1fr;
+    /* padding: 3.25rem, 3rem; */
+    /* grid-template-rows: 120px, 1fr; */
     gap: 0;
   }
 
