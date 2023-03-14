@@ -78,11 +78,11 @@ I added a dark mode theme feature to the app by following an [online tutorial.](
 
 ## Future Improvements
 
-In the future, I plan to refactor the code to make it more modular and maintainable. I also want to add pagination to the search results and the ability to sort users by different criteria.
+In the future, I plan to refactor the code to make it more modular and maintainable. I also want to refactor the dark mode feature so that is meets best practice standards.
 
 ## Conclusion
 
-Overall, I had a lot of fun building this GitHub user search app and learned a lot about React and CSS. I hope you find it useful and enjoyable to use. Feel free to check out the code on GitHub and leave any feedback or suggestions!
+Overall, I had a lot of fun building this GitHub user search app and learned a lot about React and CSS. I hope you find it useful and enjoyable to use. Feel free to check out the code and leave any feedback or suggestions on my [linkedIn](www.linkedin.com/in/kieran-gill)!
 
 ## Useful resources
 
