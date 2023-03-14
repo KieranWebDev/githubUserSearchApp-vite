@@ -45,7 +45,7 @@ function App() {
         }
       } catch (error) {
         setError(error.message);
-        console.log(error);
+        // console.log(error);
       }
     }
     fetchData();
@@ -65,6 +65,7 @@ function App() {
         <ErrorMessages
           validUsername={validUsername}
           searchQuery={searchQuery}
+          error={error}
         />
       </div>
     </div>
