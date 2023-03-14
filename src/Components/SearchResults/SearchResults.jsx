@@ -43,7 +43,7 @@ export default function SearchResults({ userData }) {
       </div>
 
       <div className="title-info">
-        <h1>{name}</h1>
+        {name ? <h1>{name}</h1> : <h1 className="not-avail">Not Available</h1>}
         <h3>
           <a href={html_url} target="_blank" rel="noreferrer">
             @{login}

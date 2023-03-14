@@ -56,9 +56,6 @@ img {
   font-size: 1rem;
   text-align: center;
 }
-/* .invalid-user-message {
-  padding: 1rem 1.5rem;
-} */
 
 @media (min-width: 500px) {
   .body {
@@ -71,7 +68,6 @@ img {
     margin: 0;
   }
   .invalid-user-message h1 {
-    /* padding: 2rem 0; */
     font-size: 1.6rem;
     text-align: center;
   }
