@@ -60,10 +60,15 @@ img {
 @media (min-width: 500px) {
   .body {
     justify-content: center;
-    padding-top: 0;
+    /* padding-top: 0; */
+    padding-top: 2rem;
+    overflow-y: scroll;
   }
 }
 @media (min-width: 768px) {
+  .body {
+    padding-top: 3rem 0;
+  }
   .app-container {
     margin: 0;
   }
