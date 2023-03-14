@@ -51,11 +51,14 @@ img {
   margin: 0 1.5rem;
   transition: all 0.5s;
 }
-.invalid-user-message {
-  padding: 2rem 0;
+.invalid-user-message h1 {
+  padding: 3rem 1.5rem;
   font-size: 1rem;
   text-align: center;
 }
+/* .invalid-user-message {
+  padding: 1rem 1.5rem;
+} */
 
 @media (min-width: 500px) {
   .body {
@@ -67,8 +70,8 @@ img {
   .app-container {
     margin: 0;
   }
-  .invalid-user-message {
-    padding: 2rem 0;
+  .invalid-user-message h1 {
+    /* padding: 2rem 0; */
     font-size: 1.6rem;
     text-align: center;
   }

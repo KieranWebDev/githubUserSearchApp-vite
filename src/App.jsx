@@ -7,6 +7,7 @@ import './App.css';
 // components
 import NavBar from './Components/NavBar';
 import SearchBar from './Components/SearchBar';
+import ErrorMessages from './Components/SearchResults/ErrorMessages';
 import SearchResults from './Components/SearchResults/SearchResults';
 
 function App() {
@@ -61,12 +62,10 @@ function App() {
         {loading && <h1>Loading...</h1>}
 
         {validUsername && !loading && <SearchResults userData={userData} />}
-        {!validUsername && (
-          <h1 className="invalid-user-message">
-            Sorry, we can't find any results for this username. Please check the
-            spelling and try again.
-          </h1>
-        )}
+        <ErrorMessages
+          validUsername={validUsername}
+          searchQuery={searchQuery}
+        />
       </div>
     </div>
   );
