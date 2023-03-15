@@ -2,7 +2,7 @@
 
 This app allows you to search for GitHub users by username and view their profiles. It was built using React and leverages the GitHub API to fetch user data.
 
-To create the app, I used a design from [frontendmentor.io](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6) which was created in Figma.
+To create the app, I used a Figma design from [frontendmentor.io](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6).
 
 # You can view the live site [here.](https://kieran-gill-github-user-search-app-vite.vercel.app/)
 
